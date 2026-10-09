@@ -1,0 +1,36 @@
+ Description of the Customer:    dimension
+    Customer ID (PK)
+    Customer Name 
+    Segment Country
+   
+
+Description of the Product :  dimension 
+   Product ID    (FK)
+   Product Name  (FK)
+   Category 
+   Sub-Category 
+    
+
+Description of the Location :  dimention 
+   Country 
+   City 
+   State
+   Postal Code (PK)
+   Region 
+
+Description of the Order :  dimention 
+   Order ID   (PK)
+   Ship Mode 
+   Order Date 
+   Ship date 
+
+Numiric Measures Columns Sales:  fact
+   raw ID                        (PK)
+   Order ID                      (FK => Order)
+   Customer ID                   (FK => Customer)
+   Product ID + Product name     (FK => Product)
+   Postal Code                   (FK => Location)
+   Sales
+   Quantity 
+   Discount 
+   Profit 
